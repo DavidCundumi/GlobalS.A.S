@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'GlobalSAS'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_52912E2CE42B4D3E9E0351283D9226B6 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F418D620C1F5492392BB70E7AA6AC6B9 }}
           package: .
