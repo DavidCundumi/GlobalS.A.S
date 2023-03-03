@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const path = require("path");
-const { async } = require("rxjs");
 const app = express();
 
 mongoose
@@ -26,9 +25,9 @@ const productSchema = mongoose.Schema({
 const usuario = mongoose.model("Usuario", productSchema);
 app.use(express.json());
 
-app.post("/api/v1/usuario", async (req, res) => {
+app.post("/api/v1/usuario", (req, res) => {
   const newUsuario = new usuario(req.body);
-  await newUsuario.save();
+  newUsuario.save();
   console.log("Peticion recibidas");
   console.log({ body: req.body });
   res.status(201).json({ ok: true });
