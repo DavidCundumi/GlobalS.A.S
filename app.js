@@ -6,5 +6,5 @@ app.use(express.static(path.join(__dirname, "public")));
 const port = process.env.PORT;
 
 app.listen(port, () => {
-  console.log(`Servidor escuchando en el puerto ${port}`);
+  console.log(`Servidor escuchando en el puerto : ${port}`);
 });
